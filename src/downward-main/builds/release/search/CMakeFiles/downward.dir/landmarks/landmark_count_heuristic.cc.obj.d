@@ -1,0 +1,13 @@
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/landmarks/landmark_count_heuristic.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/landmarks/landmark.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/landmarks/landmark_cost_assignment.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/landmarks/landmark_factory.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/landmarks/landmark_status_manager.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/landmarks/util.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/landmarks/../option_parser.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/landmarks/../plugin.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/landmarks/../task_utils/successor_generator.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/landmarks/../task_utils/task_properties.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/landmarks/../tasks/cost_adapted_task.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/landmarks/../tasks/root_task.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/landmarks/../utils/markup.h

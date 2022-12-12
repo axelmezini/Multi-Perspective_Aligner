@@ -1,0 +1,9 @@
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/search_engines/enforced_hill_climbing_search.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/search_engines/../option_parser.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/search_engines/../plugin.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/search_engines/../algorithms/ordered_set.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/search_engines/../evaluators/g_evaluator.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/search_engines/../evaluators/pref_evaluator.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/search_engines/../open_lists/best_first_open_list.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/search_engines/../open_lists/tiebreaking_open_list.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/search_engines/../task_utils/successor_generator.h

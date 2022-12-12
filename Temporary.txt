@@ -1,0 +1,50 @@
+/* Reading declare files in xml format with Declare Visualizer lib
+    File declFile = new File("j.xml");
+
+    AssignmentViewBroker broker = XMLBrokerFactory.newAssignmentBroker(declFile.getPath());
+    AssignmentModel model = broker.readAssignment();
+
+    for (ConstraintDefinition constraint : model.getConstraintDefinitions()) {
+        System.out.println(constraint.toString() + " aa");
+        System.out.println(constraint.getDescription());
+        System.out.println(constraint.getName());
+    }
+*/
+/*metodo read constraint aggiungendo il costo
+        private List<DeclareConstraint> readConstraints() throws FileNotFoundException {
+                List<DeclareConstraint> declareConstraints = new ArrayList<>();
+                Pattern constraintPattern = Pattern.compile("\\w+(\\[.*\\]) \\|");
+
+                Scanner sc = new Scanner(declareFile);
+                while(sc.hasNextLine()) {
+                    String line = sc.nextLine();
+                    String constraintString = line.split(";")[0];
+                    if (!isActivityLine(constraintString) && !isBindingLine(constraintString)) {
+                        Matcher constraintMatcher = constraintPattern.matcher(constraintString);
+                        if (constraintMatcher.find()) { //Constraints
+                            /*Integer cost = Integer.valueOf(0);
+                            if (splitLine.length > 1) {
+                                try {
+                                    cost = Integer.valueOf(splitLine[1].replace(" ", ""));
+                                } catch (NumberFormatException e) {
+                                    System.out.println("Unable to parse cost on line: " + line);
+                                }
+                            } else {
+                                System.out.println("Cost missing on line: " + line);
+                            } This part is about costs for each constraint. In RuM there is now such functionality yet. See later */
+                            DeclareConstraint declareConstraint = readConstraintString(constraintString);
+
+
+                            //declareConstraint.setViolationCost(cost);
+                            declareConstraints.add(declareConstraint);
+                        }
+                    }
+                }
+                return declareConstraints;
+            }
+*/
+/* Statistic about memory
+        return statsString + "Memory used: \n" + stats.getMemoryUsedForProblemRepresentation()/Math.pow(1024, 2) + " MBytes used for problem representation.\n" +
+                  stats.getMemoryUsedToSearch()/Math.pow(1024, 2) + " MBytes used for searching.\n" +
+                  "Total memory spent: " + (stats.getMemoryUsedForProblemRepresentation() + stats.getMemoryUsedToSearch())/Math.pow(1024, 2) + "MBytes.";*/
+*/

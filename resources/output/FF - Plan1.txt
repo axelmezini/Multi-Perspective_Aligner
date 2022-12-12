@@ -1,0 +1,23 @@
+The following Plan was found:
+00: (        loadd-airplane p1 plane lhr) [1]
+01: (        loadd-airplane p2 plane lhr) [1]
+02: (         fly-airplane plane lhr cdg) [1]
+03: (       unload-airplane p1 plane cdg) [1]
+04: (            load-truck p1 truck cdg) [1]
+05: (       unload-airplane p2 plane cdg) [1]
+06: (            load-truck p2 truck cdg) [1]
+07: (  drive-truck truck cdg south paris) [1]
+08: (        unload-truck p2 truck south) [1]
+09: (drive-truck truck south north paris) [1]
+10: (        unload-truck p1 truck north) [1]
+with an overall cost of: 11.0
+
+Time and memory usage:
+
+Time spent: 
+0.055 seconds parsing.
+0.077 seconds encoding.
+0.034 seconds searching.
+Total time spent: 0.166 seconds.
+
+

@@ -1,0 +1,8 @@
+activity Driving_Test
+activity Resit
+activity Getting_License
+activity Test_Failed
+bind Driving_Test: Grade
+Grade: integer between 1 and 10
+Absence[Driving_Test] |Driving_Test > 2 |
+Precedence[B, A] | | |

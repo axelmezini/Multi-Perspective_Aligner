@@ -1,0 +1,13 @@
+activity A
+bind A: x, y
+activity B
+bind B: activity, h
+activity C
+bind C: s
+activity: integer between 1 and 20
+bind: integer between 1 and 20
+x: integer between 0 and 100
+y: integer between 0 and 0
+h: test, tes2
+Absence[A] |A.x > 20 |
+Precedence[B, A] | | |

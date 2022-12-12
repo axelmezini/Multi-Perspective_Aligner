@@ -1,0 +1,10 @@
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/pdbs/utils.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/pdbs/pattern_collection_information.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/pdbs/pattern_database.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/pdbs/pattern_information.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/pdbs/../task_utils/causal_graph.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/pdbs/../task_utils/task_properties.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/pdbs/../utils/logging.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/pdbs/../utils/markup.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/pdbs/../utils/math.h
+/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/pdbs/../utils/rng.h
