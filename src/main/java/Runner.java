@@ -1,12 +1,7 @@
 import input.model.DeclareModel;
-import input.model.Interval;
 
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 
 public class Runner {
 
