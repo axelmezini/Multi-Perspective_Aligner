@@ -35,6 +35,7 @@ public final class Planner extends AbstractStateSpacePlanner {
             return null;
         }
     }
+
     public void writePlan(CodedProblem encodedProblem, Plan plan, int traceNr) {
         try (PrintWriter writer = new PrintWriter("output" + File.separator + "FF - Plan" + traceNr + ".txt")) {
             writer.println("The following Plan was found:\n" + encodedProblem.toString(plan) + "with an overall cost of: " + plan.cost() +
