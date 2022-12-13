@@ -7,7 +7,7 @@ public class Runner {
 
     public static void main(String[] args) throws IOException {
         //Step 1: We read the declarative Model
-        DeclareModel model = new DeclareModel("resources" + File.separator + "input" + File.separator + "newDeclare.decl");
+        DeclareModel model = new DeclareModel("src" + File.separator + "main" + File.separator + "resources" + File.separator + "input" + File.separator + "newDeclare.decl");
         System.out.println(model);
         System.out.println();
         System.out.println();

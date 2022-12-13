@@ -1,5 +1,6 @@
 package input.model;
 
+import java.util.Arrays;
 import java.util.Map;
 
 public class DeclareConstraint {
@@ -31,20 +32,28 @@ public class DeclareConstraint {
         }
     }
 
-    //TODO: Extract from parenthesis
     private void assignToAttribute(Activity activity, String condition) {
         if (condition != null) {
             String[] tokens = condition.replaceAll("[)(]", "").toLowerCase().split(" and | or ");
             for (String string : tokens) {
-                Activity.Attribute attribute = activity.getAttribute(string.replace(" ", "").split("[.<>=!]")[1]);
+                Activity.Attribute attribute;
+                if (isEnumConstraint(condition)) {
+                    attribute = activity.getAttribute(string.split("\\.")[1].split(" is not | is | not in | in ")[0]);
+                } else {
+                    attribute = activity.getAttribute(string.replace(" ", "").split("[.<>=!]")[1]);
+                }
                 attribute.createInterval(string);
             }
         }
     }
 
+    private boolean isEnumConstraint(String string) {
+        return string.contains("is") || string.contains("in");
+    }
+
     @Override
     public String toString() {
-        return "[" + constraintString + ", template=" + template
+        return "[" + constraintString + " template=" + template
                 + ", activationActivity=" + activationActivity + ", activationCondition=" + activationCondition
                 + ", targetActivity=" + targetActivity + ", targetCondition=" + targetCondition + "]\n";
     }

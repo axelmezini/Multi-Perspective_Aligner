@@ -12,7 +12,6 @@ public class DeclConst2LTL {
 
     public String translate (String constraintName, String activator, String target) {
         if (constraintName.equalsIgnoreCase("existence")) {
-            System.out.println("test");
             return eventually + activator;
         } else if(constraintName.equalsIgnoreCase("absence")) {
             return notOperator + eventually + activator;

@@ -86,12 +86,11 @@ public class Activity {
     }
 
 
-
-
-
     public static class Attribute {
         private final String name;
+        private String type;
         private double minValue, maxValue;
+        private ArrayList<String> values;
         private final ArrayList<Interval> intervals;
         private final ArrayList<Interval> disjointIntervals;
 
@@ -102,6 +101,7 @@ public class Activity {
         }
 
         public void setBounds(String type, String min, String max) {
+            this.type = type;
             if (type.equals("integer")) {
                 this.minValue = Integer.parseInt(min);
                 this.maxValue = Integer.parseInt(max);
@@ -113,21 +113,35 @@ public class Activity {
             intervals.add(new Interval(this.name + "<=" + this.maxValue));
         }
 
+        public void setValues(String type, List<String> values) {
+            this.type = type;
+            this.values = new ArrayList<>(values);
+        }
+
         public void createInterval(String constraint) {
-            if (constraint.contains("!=")) {
-                String notEqual = constraint.replace(" ", "").split("!=")[1];
-                Interval lowerBound = new Interval( "< " + notEqual);
-                Interval greaterBound = new Interval("> " + notEqual);
-                if (!intervals.contains(lowerBound)) {
-                    intervals.add(lowerBound);
-                }
-                if (!intervals.contains(greaterBound)) {
-                    intervals.add(greaterBound);
+            if (type.equals("enum")) {
+                String[] constraintValues = constraint.split(" is not | is | not in | in ")[1].split(", ");
+                for (String value : constraintValues) {
+                    if (!values.contains(value)) {
+                        values.add(value);
+                    }
                 }
             } else {
-                Interval newInterval = new Interval(constraint);
-                if (!intervals.contains(newInterval)) {
-                    intervals.add(new Interval(constraint));
+                if (constraint.contains("!=")) {
+                    String notEqual = constraint.replace(" ", "").split("!=")[1];
+                    Interval lowerBound = new Interval( "< " + notEqual);
+                    Interval greaterBound = new Interval("> " + notEqual);
+                    if (!intervals.contains(lowerBound)) {
+                        intervals.add(lowerBound);
+                    }
+                    if (!intervals.contains(greaterBound)) {
+                        intervals.add(greaterBound);
+                    }
+                } else {
+                    Interval newInterval = new Interval(constraint);
+                    if (!intervals.contains(newInterval)) {
+                        intervals.add(new Interval(constraint));
+                    }
                 }
             }
         }
@@ -258,7 +272,13 @@ public class Activity {
 
         @Override
         public String toString() {
-            return name + " with bounds: [" + minValue + ", " + maxValue + "]" + "\nand corresponding disjoint intervals: " + disjointIntervals + "\n" + "\n";
+            StringBuilder stringBuilder = new StringBuilder(name + " with ");
+            if (type.equals("enum")) {
+                stringBuilder.append("values: ").append(values);
+            } else {
+                stringBuilder.append("bounds: [").append(minValue).append(", ").append(maxValue).append("]");
+            }
+            return stringBuilder.append("\nand corresponding disjoint intervals: ").append(disjointIntervals).append("\n\n").toString();
         }
 
         public String getName() {

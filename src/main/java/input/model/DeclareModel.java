@@ -39,7 +39,7 @@ public class DeclareModel {
     private void evaluateLines(Map<String, ArrayList<String>> lines) {
         for (String line : lines.get("activityLines")) { parseActivity(line); }
         for (String line : lines.get("bindingLines")) { parseBinding(line); }
-        for (String line : lines.get("attributeDefLines")) { parseAttributeDefinition(line); } //TODO
+        for (String line : lines.get("attributeDefLines")) { parseAttributeDefinition(line); }
         for (String line : lines.get("constraintLines")) {
             DeclareConstraint constraint = parseConstraint(line);
             if (constraint != null) {
@@ -90,7 +90,6 @@ public class DeclareModel {
         }
     }
 
-    //TODO: Consider enum attributes
     private void defineAttribute(String attributeName, String attributeConstraint) {
         if (attributeConstraint.contains("integer")) {
             String[] bounds = attributeConstraint.split("between")[1].split("and");
@@ -106,7 +105,7 @@ public class DeclareModel {
         else {
             String[] elements = attributeConstraint.replace(" ", "").split(",");
             for (Activity.Attribute attribute : findInvolvedAttributes(attributeName)) {
-               // attribute.setValidValues(elements);
+                attribute.setValues("enum", Arrays.asList(elements));
             }
         }
     }
