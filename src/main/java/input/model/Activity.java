@@ -12,7 +12,15 @@ public class Activity {
         this.attributes = new ArrayList<>();
     }
 
-    public void intersect(ArrayList<ArrayList<String>> atoms) {
+    public void decomposeAttributes() {
+        ArrayList<ArrayList<String>> decompositions = new ArrayList<>();
+        for (Activity.Attribute attribute : attributes) {
+            decompositions.add(attribute.decomposeAttribute());
+        }
+        intersect(decompositions);
+    }
+
+    private void intersect(ArrayList<ArrayList<String>> atoms) {
         ArrayList<ArrayList<String>> temporary = new ArrayList<>();
         for (String atom : atoms.get(0)) {
             temporary.add(new ArrayList<>(Collections.singleton(atom)));
@@ -152,6 +160,15 @@ public class Activity {
             }
         }
 
+        public ArrayList<String> decomposeAttribute() {
+            if (type.equals("enum")) {
+                return values;
+            } else {
+                decomposeToDisjoint();
+                return createNonOverlappingConditions();
+            }
+        }
+
         public ArrayList<String> createNonOverlappingConditions() {
             ArrayList<String> nonOverLappingConditions = new ArrayList<>();
             for (Interval interval : disjointIntervals) {
@@ -285,8 +302,12 @@ public class Activity {
             return name;
         }
 
-        public ArrayList<Interval> getIntervals() {
-            return intervals;
+        public String getType() {
+            return type;
+        }
+
+        public ArrayList<String> getValues() {
+            return values;
         }
     }
 }

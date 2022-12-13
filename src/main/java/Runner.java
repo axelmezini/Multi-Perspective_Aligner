@@ -1,43 +1,45 @@
+import input.model.Activity;
+import input.model.DeclareConstraint;
 import input.model.DeclareModel;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Map;
 
 public class Runner {
 
     public static void main(String[] args) throws IOException {
         //Step 1: We read the declarative Model
         DeclareModel model = new DeclareModel("src" + File.separator + "main" + File.separator + "resources" + File.separator + "input" + File.separator + "newDeclare.decl");
-        System.out.println(model);
+        //System.out.println(model);
         System.out.println();
         System.out.println();
 
-        /*Step 3: We create the LTL formula
+
+        //Step 3: We create the LTL formula
         Map<String, Activity> activities = model.getActivities();
         ArrayList<DeclareConstraint> constraints = model.getDeclareConstraints();
 
         DeclConst2LTL translator = new DeclConst2LTL();
+
+        File tempFile = new File("LTLFile.txt");
+        tempFile.createNewFile();
+        FileWriter fw = new FileWriter(tempFile);
+        StringBuilder builder = new StringBuilder();
         for (DeclareConstraint constraint : constraints) {
             String string = constraint.getConstraintString();
             String name = (string.split("\\[")[0]);
             String activationActivity = constraint.getActivationActivity();
             String targetActivity = constraint.getTargetActivity();
-            System.out.println(name + " translated to -> " + translator.translate(name, activationActivity, targetActivity));
+            builder.append(name).append(" translated to -> ").append(translator.translate(name, activationActivity, targetActivity)).append("\n");
 
-
-            Activity activeActivity = activities.get(constraint.getActivationActivity());
-            //Activity passiveActivity = activities.get(constraint.getTargetActivity());
 
             String activeCondition = constraint.getActivationCondition();
-
-            if (activeCondition != null) {
-                String tokens[] = activeCondition.replace(" ", "").split("\\.");
-                System.out.println(tokens[0] + "    " + tokens[1]);
-            }
-
-            System.out.println(constraint.getTargetCondition());*/
-        //translator.translate("");
-
+        }
+        fw.write(builder.toString());
+        fw.close();
 
 
         /*Step 4: We read the Log file based on the model
@@ -46,10 +48,10 @@ public class Runner {
         */
 
 
-        //Intermediate steps:
-        //- We create automaton for LTL formula
-        //- We create automaton for each trace
-        //- We compare the two automatons and create the pddl files
+            //Intermediate steps:
+            //- We create automaton for LTL formula
+            //- We create automaton for each trace
+            //- We compare the two automatons and create the pddl files
 
 
         /*Step 5: We execute the planner on the pddl files
@@ -70,4 +72,5 @@ public class Runner {
             System.out.println("Problem not solvable");
         }*/
     }
+
 }

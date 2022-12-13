@@ -152,12 +152,7 @@ public class DeclareModel {
 
     private void createPartitions() {
         for (Map.Entry<String, Activity> activity : activities.entrySet()) {
-            ArrayList<ArrayList<String>> decompositions = new ArrayList<>();
-            for (Activity.Attribute attribute : activity.getValue().getAttributes()) {
-                attribute.decomposeToDisjoint();
-                decompositions.add(attribute.createNonOverlappingConditions());
-            }
-            activity.getValue().intersect(decompositions);
+            activity.getValue().decomposeAttributes();
         }
     }
 
@@ -176,5 +171,9 @@ public class DeclareModel {
 
     public Map<String, Activity> getActivities() {
         return activities;
+    }
+
+    public ArrayList<DeclareConstraint> getDeclareConstraints() {
+        return declareConstraints;
     }
 }

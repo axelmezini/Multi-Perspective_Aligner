@@ -61,4 +61,24 @@ public class DeclareConstraint {
     public DeclareTemplate getTemplate() {
         return template;
     }
+
+    public String getConstraintString() {
+        return constraintString;
+    }
+
+    public String getActivationActivity() {
+        return activationActivity;
+    }
+
+    public String getTargetActivity() {
+        return targetActivity;
+    }
+
+    public String getActivationCondition() {
+        return activationCondition;
+    }
+
+    public String getTargetCondition() {
+        return targetCondition;
+    }
 }

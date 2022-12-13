@@ -1,0 +1,3 @@
+Not Succession translated to -> □(A → ¬◇C)
+Chain Succession translated to -> □(A → ○B) ∧ □(○B → A)
+Init translated to -> C
