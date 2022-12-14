@@ -33,7 +33,7 @@ public class Runner {
             String name = (string.split("\\[")[0]);
             String activationActivity = constraint.getActivationActivity();
             String targetActivity = constraint.getTargetActivity();
-            builder.append(name).append(" translated to -> ").append(translator.translate(name, activationActivity, targetActivity)).append("\n");
+            builder.append(name).append(" translated to -> ").append(translator.translate(name, activationActivity, constraint.getActivationCondition(), targetActivity)).append("\n");
 
 
             String activeCondition = constraint.getActivationCondition();
