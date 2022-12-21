@@ -1,6 +1,6 @@
 # Renamed from types.py to avoid clash with stdlib module.
-# In the future, use explicitly relative imports or absolute
-# imports as a better solution.
+# In the future, use explicitly relative translations or absolute
+# translations as a better solution.
 
 import itertools
 
