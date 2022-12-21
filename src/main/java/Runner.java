@@ -22,7 +22,7 @@ public class Runner {
         Map<String, Activity> activities = model.getActivities();
         ArrayList<DeclareConstraint> constraints = model.getDeclareConstraints();
 
-        DeclConst2LTL translator = new DeclConst2LTL();
+       // DeclConst2LTL translator = new DeclConst2LTL();
 
         File tempFile = new File("LTLFile.txt");
         tempFile.createNewFile();
@@ -33,7 +33,7 @@ public class Runner {
             String name = (string.split("\\[")[0]);
             String activationActivity = constraint.getActivationActivity();
             String targetActivity = constraint.getTargetActivity();
-            builder.append(name).append(" translated to -> ").append(translator.translate(name, activationActivity, constraint.getActivationCondition(), targetActivity)).append("\n");
+        //    builder.append(name).append(" translated to -> ").append(translator.translate(name, activationActivity, constraint.getActivationCondition(), targetActivity)).append("\n");
 
 
             String activeCondition = constraint.getActivationCondition();
