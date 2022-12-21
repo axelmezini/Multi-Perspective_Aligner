@@ -95,7 +95,6 @@ public class DeclConst2LTL {
     }
 
     private String getActCondFormula(String activity, String condition) {
-        System.out.println("wd");
         StringBuilder builder = new StringBuilder("(" + activity + " " + andOperator + " ");
         String[] tokens = condition.split(" AND | OR ");
         for (String token : tokens) {
