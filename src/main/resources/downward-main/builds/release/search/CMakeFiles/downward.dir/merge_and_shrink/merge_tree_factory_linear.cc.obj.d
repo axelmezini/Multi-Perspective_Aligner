@@ -1,9 +1,0 @@
-/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/merge_and_shrink/merge_tree_factory_linear.h
-/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/merge_and_shrink/factored_transition_system.h
-/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/merge_and_shrink/merge_tree.h
-/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/merge_and_shrink/transition_system.h
-/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/merge_and_shrink/../options/option_parser.h
-/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/merge_and_shrink/../options/plugin.h
-/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/merge_and_shrink/../utils/markup.h
-/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/merge_and_shrink/../utils/rng.h
-/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/merge_and_shrink/../utils/rng_options.h

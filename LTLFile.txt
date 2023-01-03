@@ -1,3 +1,3 @@
-Not Succession translated to -> □((A ∧ A.ax != 40 ∧ A.ax <= 50) → ¬◇C)
-Chain Succession translated to -> □((A ∧ A.ax > 25)→ ○B) ∧ □(○B → (A ∧ A.ax > 25))
-Init translated to -> (C ∧ C.enum in (true, false))
+Response translated to -> □((A ∧ A.ax < 40) → ◇(C ∧ C.enum not in false))
+Not Precedence translated to -> □((A ∧ A.ax > 25) → ¬◇(B ∧ B.bs = 20))
+Init translated to -> (C ∧ C.enum in true, notknown)

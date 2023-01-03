@@ -1,7 +1,0 @@
-/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/potentials/diverse_potential_heuristics.h
-/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/potentials/potential_function.h
-/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/potentials/potential_max_heuristic.h
-/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/potentials/util.h
-/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/potentials/../option_parser.h
-/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/potentials/../plugin.h
-/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/potentials/../utils/rng_options.h

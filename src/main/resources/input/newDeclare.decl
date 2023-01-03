@@ -1,16 +1,15 @@
 activity A
 bind A: ax, ay
 activity B
-bind B: bs, bt, bz
+bind B: bs, bt
 activity C
 bind C: cfloat, enum
 ax: integer between 0 and 100
 ay: integer between 20 and 80
 bs: integer between -100 and 100
 bt: integer between 200 and 300
-bz: integer between 0 and 200
 cfloat: float between 1.9 and 2.5
-enum: true, false, notknown
-Not Succession[A, C] |A.ax != 40 AND A.ax <= 50 |T.enum is not false |
-Chain Succession[A, B] |A.ax > 25 |T.bs = 20 |
-Init[C] |A.enum in (true, false) |
+enum: true, false
+Response[A, C] | |T.enum not in false, true |
+Not Precedence[B, A] | | |
+Init[C] |A.enum in true |

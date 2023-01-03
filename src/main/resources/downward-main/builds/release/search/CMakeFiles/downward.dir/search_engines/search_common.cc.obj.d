@@ -1,9 +1,0 @@
-/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/search_engines/search_common.h
-/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/search_engines/../open_list_factory.h
-/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/search_engines/../option_parser_util.h
-/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/search_engines/../evaluators/g_evaluator.h
-/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/search_engines/../evaluators/sum_evaluator.h
-/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/search_engines/../evaluators/weighted_evaluator.h
-/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/search_engines/../open_lists/alternation_open_list.h
-/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/search_engines/../open_lists/best_first_open_list.h
-/Users/Axel/Desktop/Axel/Workspace/IdeaProjects/Temp/downward-main/src/search/search_engines/../open_lists/tiebreaking_open_list.h
